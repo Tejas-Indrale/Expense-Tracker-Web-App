@@ -87,15 +87,9 @@ Visit: [http://localhost:5000](http://localhost:5000)
 
 * [OpenAI GPT](https://platform.openai.com/)
 * [Flask](https://flask.palletsprojects.com/)
-* \[Your creativity 💡]
 
 ---
 
-📃 License
-
-This project is licensed under the MIT License.
-
----
 
 🧑‍💻 Author
 

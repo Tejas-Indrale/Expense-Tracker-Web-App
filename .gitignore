@@ -47,3 +47,6 @@ __pypackages__/
 build/
 dist/
 *.egg-info/
+
+
+gitpush.bat
