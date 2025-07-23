@@ -1,0 +1,190 @@
+:root {
+    --bg-color: #f0f4f8;
+    --card-bg: #ffffff;
+    --text-color: #2c3e50;
+    --accent: #00b894;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --font: 'Segoe UI', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    background: linear-gradient(135deg, #dff9fb, #c7ecee);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px var(--shadow-color);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s, color 0.3s;
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--accent);
+    text-shadow: 1px 1px 2px #ccc;
+    transition: color 0.3s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+input, select {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: inset 2px 2px 5px #ccc, inset -2px -2px 5px #fff;
+    background: #f7f7f7;
+    transition: 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+button {
+    padding: 12px;
+    background: linear-gradient(145deg, #00cec9, #0984e3);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.expense {
+    background: #ecf0f1;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px #ccc;
+    transition: 0.3s;
+}
+
+.expense:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 25px #bbb;
+}
+
+.total-box {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0984e3;
+    margin-top: 20px;
+    padding: 10px;
+    background: #dff9fb;
+    border-radius: 12px;
+    box-shadow: inset 2px 2px 5px #ccc;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #636e72;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.navbar a:hover {
+    background: #dfe6e9;
+    color: #2d3436;
+}
+
+hr {
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.toggle-dark {
+    background: linear-gradient(to right, #333, #555);
+    color: #fff;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-dark:hover {
+    background: linear-gradient(to right, #555, #777);
+}
+
+/* 🌙 Dark Mode Styles */
+.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .container {
+    background: #1e1e1e;
+}
+
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode .total-box {
+    color: #00cec9;
+    text-shadow: none;
+}
+
+.dark-mode .expense,
+.dark-mode .total-box,
+.dark-mode input,
+.dark-mode button,
+.dark-mode form {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+    box-shadow: none;
+}
+
+.dark-mode input, 
+.dark-mode select {
+    box-shadow: inset 2px 2px 5px #111, inset -2px -2px 5px #222;
+}
+
+.dark-mode button {
+    background: linear-gradient(145deg, #6c5ce7, #00b894);
+    color: #fff;
+}
+
+.dark-mode .navbar a {
+    color: #90caf9;
+}
+
+.dark-mode .navbar a:hover {
+    background: #333;
+    color: #fff;
+}

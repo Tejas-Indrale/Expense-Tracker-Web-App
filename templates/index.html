@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <h1>💰 Expense Tracker</h1>
+            <a href="/insights">💡 AI Insights</a>
+            <button class="toggle-dark" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        </div>
+
+        <!-- Add Expense -->
+        <h2>Add a New Expense</h2>
+        <form action="/add" method="post">
+            <input type="number" step="0.01" name="amount" placeholder="Amount (₹)" required>
+            <input type="text" name="category" placeholder="Category" required>
+            <button type="submit">➕ Add Expense</button>
+        </form>
+
+        <!-- Filter -->
+        <h2>Filter by Category</h2>
+        <form method="GET" action="/">
+            <input type="text" name="category" placeholder="e.g. food">
+            <button type="submit">🔍 Filter</button>
+        </form>
+
+        <!-- Expense List -->
+        <h2>All Expenses</h2>
+        {% if filter_mode %}
+            <p>🔎 Showing results for: <strong>{{ category }}</strong></p>
+        {% endif %}
+
+        {% if expenses %}
+            {% for expense in expenses %}
+                <div class="expense">
+                    ₹{{ expense.amount }} — <strong>{{ expense.category }}</strong>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No expenses added yet.</p>
+        {% endif %}
+
+        <!-- Total -->
+        <div class="total-box">
+            Total Expenses: ₹{{ total }}
+        </div>
+
+        <hr>
+        <a href="/insights">💡 View AI Spending Insights</a>
+    </div>
+
+    <!-- 🔁 Dark Mode Toggle Script -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const btn = document.querySelector('.toggle-dark');
+            btn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+        }
+    </script>
+
+</body>
+</html>
