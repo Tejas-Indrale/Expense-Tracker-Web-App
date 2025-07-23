@@ -2,10 +2,9 @@
 
 > A sleek, 3D-styled web app to track your expenses and get smart AI-powered spending insights — built with Flask + OpenAI 💡✨
 
-![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/expense-tracker-web?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/expense-tracker-web?style=flat-square)
-![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
-
+![![Repo Size](https://img.shields.io/github/repo-size/Tejas-Indrale/Expense-Tracker-Web-App?style=for-the-badge)](https://github.com/Tejas-Indrale/Expense-Tracker-Web-App)
+[![Last Commit](https://img.shields.io/github/last-commit/Tejas-Indrale/Expense-Tracker-Web-App?style=for-the-badge)](https://github.com/Tejas-Indrale/Expense-Tracker-Web-App/commits/main)
+[![License](https://img.shields.io/github/license/Tejas-Indrale/Expense-Tracker-Web-App?style=for-the-badge)](LICENSE)
 ---
 
 🚀 Features
